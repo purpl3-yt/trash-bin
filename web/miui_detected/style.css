@@ -1,0 +1,35 @@
+body {
+    background-color: black;
+}
+
+.main {
+    text-align: center;
+    animation: anim 2s infinite, rainbow 20s infinite;
+}
+
+@keyframes anim {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rainbow{
+    0%{color: orange;}
+    10%{color: purple;}
+    20%{color: red;}
+    30%{color: CadetBlue;}
+    40%{color: yellow;}
+    50%{color: coral;}
+    60%{color: green;}
+    70%{color: cyan;}
+    80%{color: DeepPink;}
+    90%{color: DodgerBlue;}
+    100%{color: orange;}
+}
