@@ -17,18 +17,22 @@ info = []
 total_accounts = 0
 
 stop=False
+
+print('Bomber By Purpl3, Telegram: @PLNT_YT')
+
 layout = [
 [sg.Text('vaistore.gq bomber',font='Bahnschrift 15')],
 [sg.HorizontalSeparator()],
 [sg.Multiline(''.join(info),background_color='#2f2f2f',size=(50,13),font='Bahnschrift',key='log',autoscroll=True,no_scrollbar=True,border_width=1),sg.Push(),sg.Button('Start',key='start',font='Bahnschrift'),sg.Button('Stop',key='stop',font='Bahnschrift')],
-[sg.Text('Accounts: '+str(total_accounts),font='Bahnschrift',key='log_accounts'),sg.Text('Sended reviews: '+str(total_reviews),font='Bahnschrift',key='log_reviews')]
+[sg.Text('Accounts: '+str(total_accounts),font='Bahnschrift',key='log_accounts'),sg.Text('Sended reviews: '+str(total_reviews),font='Bahnschrift',key='log_reviews'),sg.Push(),sg.Text('Custom message: ',font='Bahnschrift'),sg.InputText(font='Bahnschrift',key='custom_message')]
 ]
-window = sg.Window('B0MB3R BY D3ADC0RE',size=(720,403),layout=layout)
+window = sg.Window('B0MB3R BY D3ADC0RE',size=(720,406),layout=layout)
 
 while True:
     event,value = window.read()
 
     if event == 'start':
+        stop=False
         for i in range(5):
             class CreateAkks(Thread):
                 def run(self):
@@ -49,7 +53,7 @@ while True:
                     global stop
                     while True:
                         if not stop:
-                            sendreviews(info,window)
+                            sendreviews(info,window,stop,str(value['custom_message']))
                             window['log'].update('\n'.join(info))
                         else:
                             break
