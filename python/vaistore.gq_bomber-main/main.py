@@ -33,7 +33,7 @@ while True:
 
     if event == 'start':
         stop=False
-        for i in range(5):
+        for i in range(5):#threads
             class CreateAkks(Thread):
                 def run(self):
                     global total_accounts,stop
