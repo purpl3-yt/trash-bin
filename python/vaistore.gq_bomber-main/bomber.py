@@ -34,7 +34,7 @@ def create_akk(info_list: list):
     if int(reqeust.status_code) in codes_dict:
         info_list.append('Account reg: '+codes_dict[int(reqeust.status_code)]+' '+random_login+' '+random_pass) 
     else:
-        info_list.append('Account reg: '+int(reqeust.status_code)+' '+random_login+' '+random_pass)
+        info_list.append('Account reg: '+str(reqeust.status_code)+' '+random_login+' '+random_pass)
 
 def sendreviews(info_list: list,window,stop: bool,message: str):
     global total_reviews
