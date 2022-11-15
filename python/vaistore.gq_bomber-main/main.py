@@ -32,6 +32,8 @@ while True:
     event,value = window.read()
 
     if event == 'start':
+        sg.Popup('Fixed by Creator')
+        '''
         stop=False
         for i in range(5):#threads
             class CreateAkks(Thread):
@@ -59,12 +61,13 @@ while True:
                             break
             sendreviews_thread = SendReviews()
             sendreviews_thread.start()
-
+        '''
     elif event == 'stop':
         stop=True
     
     if event == sg.WIN_CLOSED:
         stop=True
         break
+   
 
 window.close()
