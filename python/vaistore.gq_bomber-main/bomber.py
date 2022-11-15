@@ -4,7 +4,7 @@ import string
 import random
 strings = string.ascii_letters
 
-host = 'https://vaistore.gq/'
+host = 'https://vaistore.gq?cf_clearance=XjAZye.v3bt6pwBrok4j_AAM67BJXnZKNL0mPh_tpvo-1668455997-0-150'
 
 site = requests.get(host)
 
@@ -52,6 +52,7 @@ def sendreviews(info_list: list,window,stop: bool,message: str):
                     'Post_Review':''
                     }
                 reqeust123 = requests.post(host+'vai_acc_sys/system/AddReview.php?AppID='+i,cookies={
+            'cf_clearance':'XjAZye.v3bt6pwBrok4j_AAM67BJXnZKNL0mPh_tpvo-1668455997-0-150',
             'PHPSESSID':'dn3ng4p0qv2te59c2dm71jan40',
             'SessionID':'c04379e3a209b2ae8118e63234332057'
                 },data=data_to_send)

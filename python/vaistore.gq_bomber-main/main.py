@@ -45,8 +45,8 @@ while True:
                             window['log_accounts'].update('Accounts: '+str(total_accounts))
                         else:
                             break
-            createakks_thread = CreateAkks()
-            createakks_thread.start()
+            #createakks_thread = CreateAkks()
+            #createakks_thread.start()
 
             class SendReviews(Thread):
                 def run(self):
