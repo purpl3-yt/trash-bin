@@ -123,7 +123,7 @@ while True:
         elif event.type == pg.KEYDOWN and input_active:#Текст в браузере
             if event.key == pg.K_RETURN:
                 input_active = False
-            elif event.key == pg.K_BACKSPACE:
+            elif event.key == pg.K_BACKSPACE:#если нажат backspace удалить 1 символ из текста
                 text =  text[:-1]
             else:
                 text += event.unicode

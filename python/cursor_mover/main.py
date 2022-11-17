@@ -16,3 +16,4 @@ def random_move():#random move mouse
 while True:
     wait(uniform(2,3.6))#wait 
     random_move()#move mouse
+    print('Moving Cursor...')

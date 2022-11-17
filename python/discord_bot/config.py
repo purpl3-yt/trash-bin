@@ -1,1 +1,1 @@
-TOKEN = None
+TOKEN = input('Enter TOKEN: ')

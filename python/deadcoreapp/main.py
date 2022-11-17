@@ -1,11 +1,12 @@
-import webbrowser
-import PySimpleGUI as sg
+from layouts import tab_app_layout,tab_cheats_layout,tab_games_layout,tab_cheats_minecraft_layout,layout
 from threading import Thread
 from time import sleep as delay
 from txt import steps
-from layouts import tab_app_layout,tab_cheats_layout,tab_games_layout,tab_cheats_minecraft_layout,layout
+import webbrowser
+import PySimpleGUI as sg
 import configparser
-#import pygame
+import pygame
+import os
 apps = {
 #Games
 'jseb': 'https://store.steampowered.com/app/531510/Just_Shapes__Beats',
@@ -13,7 +14,7 @@ apps = {
 'krunker': 'https://krunker.io',
 'stickfight': 'https://store.steampowered.com/app/674940/Stick_Fight_The_Game/',
 'astroneer': 'https://store.steampowered.com/app/361420/ASTRONEER/',
-#Proggrams
+#Programs
 'flameshot': 'https://flameshot.org/',
 'kdeconnect': 'https://kdeconnect.kde.org/',
 'kdenlive': 'https://kdenlive.org/en/',
@@ -29,6 +30,11 @@ apps = {
 }
 window = sg.Window(' ', layout,finalize=True,icon='./deadcorelogo.ico',size=(680,280),resizable=False)
 config = configparser.ConfigParser()
+if not os.path.isfile('settings.ini'):
+    with open('settings.ini','w') as cfg:
+        cfg.write('''
+[SETTINGS]
+music = 1''')
 config.read('settings.ini')
 pygame.init()
 play = False
@@ -59,13 +65,6 @@ class ChangeTitle(Thread):
 class ChangeText(Thread):
     global do_text_shif
     def run(self):
-        for i in range(0,len(steps2)):
-            delay(0.05)
-            if i == 9:
-                window['site'].update(str(steps2[i])[0:8])    
-            else:
-                window['site'].update(steps2[i])
-        delay(0.2)
         colors = ['#a865c9','#a36bcb','#9e70cc','#9a76ce','#947bcf','#8f80d1','#8a84d2','#8489d4','#7e8dd5','#7792d7','#7196d8','#6a9ada','#629edb','#5aa2dc','#51a5de','#46a9df','#3aace1','#2bb0e2']
         colors_rev = colors[::-1]
         for i in colors_rev:
