@@ -1,6 +1,4 @@
-***Bomber By Purpl3***
-
-__Free bomber with cool UI__
+# __Free bomber with cool UI__
 
 _Screenshots_
 

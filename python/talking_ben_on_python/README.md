@@ -3,9 +3,6 @@
 ### Russian Version
 Screenshots:
 
-
-
-
 ![Screenshot_1](https://user-images.githubusercontent.com/92853778/158995286-58bb81bd-b546-4213-8666-1d1be4fbdc4e.png)
 ![Screenshot_2](https://user-images.githubusercontent.com/92853778/158995208-0f94349e-10f1-4280-9366-8856652b8045.png)
 
@@ -23,8 +20,3 @@ Screenshots:
 5) `sudo apt install python3-tk` Install packages
 6) `pip install playsound==1.2.2` Install packages
 7) `python3 ben.py` Run the file
-
-
-
-# Мой дискорд = PLNT#5507
-# Мой дискорд сервер = https://bit.ly/312UV3E
