@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class CoolOutput {
     
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException {//thank to wcq!
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter text: ");
         String temp = sc.next();
