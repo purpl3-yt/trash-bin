@@ -3,8 +3,8 @@ import os,shutil
 clean_folders = {#folders to can be deleted
     'prefetch':['C:\\Windows\\Prefetch','It delete proggram cache'],
     'temp':[str(os.getenv('temp')),'It delete temp files'],
-    'discord':['C:\\Users\\Purpl3\\AppData\\Roaming\\discord\\Cache','It delete discord cache files'],
-    'recent':[{os.getenv("APPDATA")}+'\\Microsoft\\Windows\\Recent','It delete recent folder']
+    'discord':[os.getenv('APPDATA')+'\\Roaming\\discord\\Cache','It delete discord cache files'],
+    'recent':[os.getenv('APPDATA')+'\\Microsoft\\Windows\\Recent','It delete recent folder']
 }
 
 
