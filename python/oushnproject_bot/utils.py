@@ -31,7 +31,9 @@ def getplayers(server: int):
     for i in json_data['players']:#for every player
         if not i['Name'] in ['oushnproject','oushnproject.com']:#remove bots from array
             players_info[i['Name']] = f'Имя: {i["Name"]}\nФрагов: {i["Frags"]}\nВремя игры: {i["TimeF"]}\nСервер: {json_data["HostName"]}'
+    try:json_data['players']
+    except KeyError:return
     for i in json_data['players']:#array with players names
         players_names.append(i['Name'])
         players_server_convert[i['Name']] = json_data['HostName']
-    return [players_info,players_names,players_server_convert]#return 2 objects
+    return [players_info,players_names,players_server_convert]#return 3 objects

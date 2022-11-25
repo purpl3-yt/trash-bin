@@ -1,6 +1,7 @@
 import sqlite3
 import sys
 import os
+import re
 
 class Game:
     def __init__(self,name,genres,type,description,year,systemrequirements,cost,likes,img,gamelink,id=0):
@@ -295,17 +296,18 @@ def find(find_str):
     res = []
     con = condb()
     cursor = con.cursor()
+    
 
     qwery = f'''
-    SELECT * FROM game WHERE name = "{find_str}";
+    SELECT name, id FROM game;
     '''
     cursor.execute(qwery)
     record = cursor.fetchall()
-    for rec in record:
-        g = Game(rec[1], rec[2], rec[3], rec[4], rec[5], rec[6], rec[7], rec[8], rec[9],rec[10], id=rec[0])
-        res.append(g)
     con.close()
-    return record
+    
+    for game in record:
+        if re.match(r''+str(game[0])[:4]+'*', find_str):
+            return game[1]
 
 def findbyid(id):
     con = condb()

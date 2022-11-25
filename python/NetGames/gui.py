@@ -12,7 +12,7 @@ obj_new = get_new_game()
 obj_pop = get_pop_game()
 pop_obj_img = []
 layout = [
-[sg.Image('./assets/logo.png',tooltip='NetGames'),sg.InputText('',key='search_text',font='Robot 15',tooltip='Напишите игру которую хотите найти'),sg.Image('./assets/search_ico.png',key='search_button',enable_events=True,tooltip=('Нажмите для поиска')),sg.Push(),sg.Button('Админка',font='Robot 15',key='admin',visible=False)],
+[sg.Image('./assets/logo.png',tooltip='NetGames'),sg.InputText('',key='search_text',font='Robot 15',tooltip='Напишите игру которую хотите найти'),sg.Image('./assets/search_ico.png',key='search_button',enable_events=True,tooltip=('Нажмите для поиска')),sg.Text('',key='search_log',font='Robot 15'),sg.Push(),sg.Button('Админка',font='Robot 15',key='admin',visible=False)],
 [sg.HorizontalSeparator()],
 [sg.Text('Popular Games',font='Robot 20'),sg.Button('      ',button_color='black',key='toggle_admin')],
 [sg.HorizontalSeparator()],
@@ -62,7 +62,10 @@ while True:
             name = values['search_text']
             games = find(name.lower())
             if games:
-                GameMenu(int(games[0][0]))
+                window['search_log'].update('')
+                GameMenu(int(games))
+            else:
+                window['search_log'].update('Такой игры нету!')
         #print_all(games)
     elif event.startswith('new'): 
         event_id = f'{event[3:]}'
