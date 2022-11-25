@@ -14,6 +14,6 @@ def random_move():#random move mouse
     py.moveTo(random_x, random_y, uniform(2,2.4), py.easeInOutCirc)#move mouse to random cords
 
 while True:
+    print('Moving Cursor...')
     wait(uniform(2,3.6))#wait 
     random_move()#move mouse
-    print('Moving Cursor...')
