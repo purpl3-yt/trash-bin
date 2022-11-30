@@ -16,5 +16,5 @@ chats = [
 'ROSSIATOP4IKI',
 ]#add chats here
 message = [
-'https://github.com/purpl3-yt/trash-bin/tree/main/python/arc',
+'https://discord.gg/Ag6XCDfzXz',
 ]#add messagees here
