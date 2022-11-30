@@ -16,5 +16,7 @@ chats = [
 'ROSSIATOP4IKI',
 ]#add chats here
 message = [
-'https://discord.gg/Ag6XCDfzXz',
-]#add messagees here
+'Слава Україні!',
+'Смерть ворогам!',
+'Путин ХУЙЛО!',
+'Україна виграє!']#add messagees here
