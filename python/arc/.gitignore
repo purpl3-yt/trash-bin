@@ -1,1 +1,2 @@
-*.session
+*.session*
+config2.py
