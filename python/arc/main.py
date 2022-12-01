@@ -1,4 +1,4 @@
-from config import *
+from config2 import *
 from pyrogram import Client,filters,idle
 from pyrogram.errors import *
 from resources import *
@@ -18,26 +18,34 @@ async def arc(_, msg):
     stop=False
     await msg.edit(f'Spam Started at {datetime.datetime.now().strftime("%H:%M")}!')
     while True:
-        for i in chats:
-            if stop:
-                break
-            try:
-                rgroup = await app.get_chat(i)
-            except exceptions.not_acceptable_406.ChannelPrivate:
-                pass
-            print('Spam to group: '+rgroup.title)
-            try:
-                await msg.edit('Spam to group: '+rgroup.title)
-            except exceptions.bad_request_400.MessageNotModified:
-                continue
+        for chat in chats:
             for i in range(20):
+                if stop:
+                    break
+                try:
+                    rgroup = await app.get_chat(chat)
+                    print('Spam to group: '+rgroup.title)
+                except exceptions.not_acceptable_406.ChannelPrivate:
+                    pass
+                except exceptions.flood_420.FloodWait:
+                    await asyncio.wait(1)
+                    print('Wait 1 sec')
+                except KeyError:
+                    pass
+                try:
+                    await msg.edit('Spam to group: '+rgroup.title)
+                except exceptions.bad_request_400.MessageNotModified:
+                    continue
                 try:
                     await app.send_message(rgroup.id,random.choice(message))
                 except exceptions.forbidden_403.ChatWriteForbidden as e:
-                    print('Join group: '+rgroup.title)
-                    await app.join_chat(rgroup.id)
-                    print('Archive group: '+rgroup.title)
-                    await app.archive_chats(rgroup.id)
+                    try:
+                        await app.join_chat(rgroup.id)
+                        print('Join group: '+rgroup.title)
+                        #print('Archive group: '+rgroup.title)
+                        #await app.archive_chats(rgroup.id)
+                    except exceptions.flood_420.FloodWait:
+                        pass
                 except exceptions.flood_420.SlowmodeWait:
                     pass
                 except exceptions.flood_420.FloodWait:
