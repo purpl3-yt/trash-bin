@@ -6,9 +6,17 @@ import webbrowser
 from termcolor import *
 from time import sleep
 from datetime import datetime
-from utils import *
 import playsound
 from gtts import gTTS
+
+def hackerstr(lenght):
+    from random import choice
+    symbols = ['a','b','c','d','e','i','g']
+    hackerstr = ''
+    for i in range(0,int(lenght)):
+        hackerstr+=choice(symbols)
+    return hackerstr
+
 print('Для старта напишите "Старт бравл стронг"')
 start_str = input('Brawl strong: ')
 if str(start_str).lower().startswith('старт бра'):

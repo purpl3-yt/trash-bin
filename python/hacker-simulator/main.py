@@ -3,7 +3,24 @@ import string
 import random
 from colorama import Fore
 
-random_words = ['BRAIN','HACKER','MATRIX','LINUX','WINDOWS','APPLE','MIND','POWER','KALI_LINUX','HACK_WEBSITE','CPANEL','SFTP','FTP','SSH']
+random_words = [
+'BRAIN',
+'HACKER',
+'MATRIX',
+'LINUX',
+'WINDOWS',
+'APPLE',
+'MIND',
+'POWER',
+'KALI_LINUX',
+'HACK_WEBSITE',
+'CPANEL',
+'SFTP',
+'FTP',
+'SSH',
+'CRACK',
+'HACK',
+'PURPL3']
 
 def gprint(text):
     print(Fore.GREEN+text+Fore.RESET)

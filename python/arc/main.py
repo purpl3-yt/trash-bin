@@ -1,4 +1,4 @@
-from config2 import *
+from config import *
 from pyrogram import Client,filters,idle
 from pyrogram.errors import *
 from resources import *

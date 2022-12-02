@@ -1,1 +1,0 @@
-# The random mouse mover
