@@ -3,7 +3,7 @@ import java.util.Scanner;
 class MegaCoolProgram {
 
     private static char rndChar () {
-        int rnd = (int) (Math.random() * 52); // or use Random or whatever
+        int rnd = (int) (Math.random() * 52);
         char base = (rnd < 26) ? 'A' : 'a';
         return (char) (base + rnd % 26);
 
