@@ -1,4 +1,4 @@
-apps = {
+{
     #Browsers
     'firefox.exe':['firefox',True],#Mozilla Firefox
     'chrome.exe':['chrome',True],#Chrome
