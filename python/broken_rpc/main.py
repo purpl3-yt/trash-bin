@@ -1,16 +1,23 @@
 from pypresence import Presence
 import time
 import random
-client_id = "1049327004836708373"
+import os,sys
+client_id = '1049327004836708373'
 RPC = Presence(client_id=client_id)
 RPC.connect()
 
-print('Connected to Discord')
+os.chdir(sys.path[0])
+
+print('Connected to Discord\nBrokenRPC by Purpl3')
 
 words = None
 exec(open('main_data.py','r').read())
 
 count = 0
+
+small_images = ['discord_logo','123123']
+
+smallimage = random.choice(small_images)
 
 while True:
     
@@ -18,11 +25,11 @@ while True:
     
     time.sleep(2)
 
-    RPC.update(large_image="glitch", large_text="What am I doing?",small_image='123123',small_text=random.choice(words), start=start_time,state=random.choice(words)) # We want to apply start time when you run the presence.
+    RPC.update(large_image='glitch', large_text='What am I doing?',small_image=smallimage,small_text=random.choice(words), start=start_time,state=random.choice(words))
     
     if count>=3:#every 3 seconds
         exec(open('main_data.py','r').read())
-        
+        smallimage = random.choice(small_images)
         count = 0
 
     count+=1
