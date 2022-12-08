@@ -19,5 +19,7 @@ words = [
 'Glory to Ukraine!',
 "What's wrong, Scared?",
 'Python',
-'Purpl3_YT - My nick in minecraft'
+'Purpl3_YT - My nick in minecraft',
+'discord = None',
+"eval('2+2')"
 ]
