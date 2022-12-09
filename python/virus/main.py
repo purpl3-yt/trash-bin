@@ -38,7 +38,10 @@ def MoveMouse(min: int,max: int,count: int):
         pyautogui.moveTo(random.randint(min,max),random.randint(min,max))
         time.sleep(0.1)
 
-Thread(target=Cbeep,args=(30,)).start()
-Thread(target=ToggleTaskBar,args=(30,)).start()
-Thread(target=MoveMouse,args=(100,700,30)).start()
-Thread(target=ChangeBrightness,args=(4,)).start()
+def Main(global_count: int):
+    Thread(target=Cbeep,args=(global_count,)).start()
+    Thread(target=ToggleTaskBar,args=(global_count,)).start()
+    Thread(target=ChangeBrightness,args=(4,)).start()
+    Thread(target=MoveMouse,args=(100,700,global_count)).start()
+
+Main(5)
