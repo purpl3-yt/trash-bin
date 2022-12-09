@@ -16,7 +16,7 @@ taskbar = windll.user32.FindWindowA(b'Shell_TrayWnd', None)
 def ToggleTaskBar(count: int):
     for c in range(count):
         windll.user32.ShowWindow(taskbar, 0)#Hide
-        time.sleep(0.2)
+        time.sleep(0.1)
         windll.user32.ShowWindow(taskbar, 9)#Show
 
 def ChangeBrightness(count: int):
