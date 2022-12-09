@@ -80,13 +80,6 @@ def GameMenu(gameid):
         
         elif event.startswith('star'):
             updatelikes(int(event[4:]),game_info)
+            convert_nums = {1:' здезду',2:' звезды',3:' звезды',4:' звезды',5:' звезд'}
+            sg.Popup('Вы поставили отзыв в '+str(int(event[4:]))+str(convert_nums[int(event[4:])]))
     window.close()
-
-
-'''
-TODO:
-[+] Сделать тут окно как в картинке game_menu.png через sg.column и добавить лайки год а справа будет описание и кнопка загрузки
-[+] Через requests сделать запрос на сайт чтобы скачать игру
-[+] И в базе сделать ссылку на игру
-[+] Сделать поддержку загрузки игр для windows
-'''
