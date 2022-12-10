@@ -7,6 +7,8 @@ import random
 import time
 import subprocess
 
+print('Simple Virus')
+
 def Cbeep(count: int):
     for c in range(count):
         win32api.Beep(random.randint(100,750),random.randint(100,300))
