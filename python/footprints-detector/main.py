@@ -86,4 +86,4 @@ for result in search:#idk if that work, i have ip block <3
 
         save_result(urlparse(result).hostname,result)
 
-print('Founded '+str(count)+' sites of which '+str(nsfw_count)+' nsfw')
+print('With request: '+str(nickname)+' founded '+str(count)+' sites of which '+str(nsfw_count)+' nsfw')
