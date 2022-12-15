@@ -26,18 +26,20 @@ def save_result(site: str,url: str):
 
 nsfw = False
 
-nsfw_strings = ['cG9ybg==','c2V4','cG9ybm8=','eHZpZGVv']
+nsfw_strings = ['cG9ybg==','c2V4','cG9ybm8=','eHZpZGVv']#18+ words
 decoded_nsfw_strings = []
 for nsfw_string in nsfw_strings:
     decoded_nsfw_strings.append(bytes(base64.b64decode(nsfw_string)).decode('utf-8'))
 
 def check_nsfw(result,nsfw,nsfw_count):
-    if nsfw:
-        for string in decoded_nsfw_strings:
-            if string in result:
+    for string in decoded_nsfw_strings:
+        if string in result:
+            if not nsfw:
                 print('Nsfw url found!')
-                nsfw_count+=1
-                return True
+            if nsfw:
+                print('Nsfw url found: '+result)
+            nsfw_count+=1
+            return True
 
 while True:
     nickname = input('Enter an nickname ("2" clear log, "3" enable nsfw results): ')
@@ -73,14 +75,14 @@ nsfw_count = 0
 
 for result in search:#idk if that work, i have ip block <3
 
-    if nsfw and check_nsfw(result,nsfw,nsfw_count):
-        print('Nsfw Found!')
+    if check_nsfw(result,nsfw,nsfw_count):
+        nsfw_count+=1
 
     elif not check_nsfw(result,nsfw,nsfw_count):
         print_result(result)
 
         count+=1
-        if not nsfw:
-            save_result(urlparse(result).hostname,result)
+
+        save_result(urlparse(result).hostname,result)
 
 print('Founded '+str(count)+' sites of which '+str(nsfw_count)+' nsfw')
