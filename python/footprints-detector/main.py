@@ -31,6 +31,7 @@ decoded_nsfw_strings = []
 for nsfw_string in nsfw_strings:
     decoded_nsfw_strings.append(bytes(base64.b64decode(nsfw_string)).decode('utf-8'))
 
+
 def check_nsfw(result,nsfw,nsfw_count):
     for string in decoded_nsfw_strings:
         if string in result:
