@@ -74,7 +74,7 @@ while True:
 count = 0
 nsfw_count = 0
 
-for result in search:#idk if that work, i have ip block <3
+for result in search:
 
     if check_nsfw(result,nsfw,nsfw_count):
         nsfw_count+=1
