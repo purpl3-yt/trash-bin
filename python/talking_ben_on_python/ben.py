@@ -5,7 +5,7 @@ sg.theme('DarkAmber')
 layout = [  [sg.Text('Привет это бен')],
             [sg.Text('Спроси что-то у бена'), sg.InputText(key='question',do_not_clear=False),],
             [sg.Button('Спросить', key='play'), sg.Button('Выйти')],
-            [sg.T('', text_color='white', size=(50,1), key='output')]]
+            [sg.Text('', text_color='white', size=(50,1), key='output')]]
 def write(line):      
         window['output'].update(line)
 def response():

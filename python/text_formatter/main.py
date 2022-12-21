@@ -23,7 +23,7 @@ def getmode():
 def gettext():
     return input(Fore.GREEN+'Enter your text: '+Fore.RESET)
 
-gprint('Hello! its text formater')
+gprint("Hello! it's text formater")
 
 err_mode = False
 

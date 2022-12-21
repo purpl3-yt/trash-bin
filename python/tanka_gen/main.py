@@ -24,4 +24,5 @@ def create_screenshot():
 
 keyboard.add_hotkey('alt + shift + s', create_screenshot)
 while True:
+    print('To screenshot press: alt + shift + s\nFor exit press: esc')
     keyboard.wait('esc')

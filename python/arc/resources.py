@@ -13,7 +13,8 @@ chats = [
 'chat_russkiy',
 'rossiyaluchaya11',
 'ROSSIATOP4IKI',
-'POCCUYAY']#add chats here
+'POCCUYAY',
+'new_RF1_777']#add chats here
 message = [
 'Слава Україні!',
 'Смерть ворогам!',

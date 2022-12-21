@@ -15,9 +15,9 @@ exec(open('main_data.py','r').read())
 
 count = 0
 
-#small_images = ['discord_logo','123123']
+small_images = ['discord_logo','123123']
 
-small_images = ['123123']
+#small_images = ['123123']
 
 
 smallimage = random.choice(small_images)

@@ -1,6 +1,9 @@
 import pygame as pg
-import sys
+import sys,os
 from time import sleep as wait
+
+os.chdir(sys.path[0])
+
 FPS = 60
 pg.init()
 sc = pg.display.set_mode((800, 600))

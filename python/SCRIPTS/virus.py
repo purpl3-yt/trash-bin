@@ -43,7 +43,7 @@ def MoveMouse(min: int,max: int,count: int):
 def Main(global_count: int):
     Thread(target=Cbeep,args=(global_count,)).start()
     Thread(target=ToggleTaskBar,args=(global_count,)).start()
-    Thread(target=ChangeBrightness,args=(4,)).start()
+    Thread(target=ChangeBrightness,args=(global_count,)).start()
     Thread(target=MoveMouse,args=(100,700,global_count)).start()
 
 Main(5)

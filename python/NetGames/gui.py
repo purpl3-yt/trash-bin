@@ -3,9 +3,10 @@ import PySimpleGUI as sg
 from objects import findbyid, get_new_game,get_pop_game,find
 from game_menu import GameMenu
 from admin import *
+import os,sys
 sg.theme('Black')
 
-
+os.chdir(sys.path[0])
 
 
 obj_new = get_new_game()

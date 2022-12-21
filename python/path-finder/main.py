@@ -6,12 +6,13 @@ paths = {
 'appdata':os.getenv('appdata'),
 'localappdata':os.getenv('localappdata'),
 'temp':os.getenv('temp'),
+'recent':f'{os.getenv("USERPROFILE")}\AppData\Roaming\Microsoft\Windows\Recent'
 }#You can add paths here
 
 while True:
     s_path = cinput('For paths enter "help": ')
     if s_path in ['h','help','1','']:
-        gprint(' '.join(paths))
+        gprint('\n'.join(paths))
     else:
         try:
             open(paths[str(s_path)])

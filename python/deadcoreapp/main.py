@@ -1,10 +1,10 @@
-from layouts import tab_app_layout,tab_cheats_layout,tab_games_layout,tab_cheats_minecraft_layout,layout
-from threading import Thread
 from time import sleep as delay
-from txt import steps
-import webbrowser
+from threading import Thread
 import PySimpleGUI as sg
+from layouts import *
+from txt import steps
 import configparser
+import webbrowser
 import pygame
 import os
 apps = {
@@ -160,6 +160,6 @@ while True:
                     config.write(configfile)
     check_buttons()
     if event == 'purple':
-        popup('Discord создателя: PLNT#5507')
+        popup('Discord создателя: PLNT#6825')
 
 window.close()

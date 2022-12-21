@@ -2,9 +2,11 @@ import pygame as pg #Импорт
 import sys #Импорт
 import webbrowser #Импорт
 from time import sleep as wait #Импорт
-import time
+import os,sys
 from playsound import playsound #Импорт
 import configparser #Импорт
+
+os.chdir(sys.path[0])
 
 config = configparser.ConfigParser()#Конфиг с темами ит.д
 

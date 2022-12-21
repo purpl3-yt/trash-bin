@@ -3,7 +3,7 @@ import os
 db = 'admin.db'
 '''
 
-Change your login and password at 25 line
+Change your login and password at 25 line!
 
 '''
 

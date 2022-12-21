@@ -73,6 +73,19 @@ async def leave(_,msg):
             pass
     await msg.delete()
 
+@app.on_message(filters.command('join',prefixes='.') & filters.me)
+async def join(_,msg):
+    for i in chats:
+        try:
+            rgroup = await app.get_chat(i)
+            await msg.edit('Join into group: '+rgroup.title)
+            await app.join_chat(rgroup.id)
+        except exceptions.not_acceptable_406.ChannelPrivate:
+            pass
+        except KeyError:
+            pass
+    await msg.delete()
+
 @app.on_message(filters.command('help',prefixes='.') & filters.me)
 async def help(_,msg):
     await msg.edit('''<code>
@@ -101,7 +114,7 @@ async def messages(_,msg):
 
 @app.on_message(filters.command('update',prefixes='.') & filters.me)
 async def update(_,msg):
-    from resources import chats,message
+    exec(open('./resources.py','r',errors='ignore').read())
 
 async def main():
     print('\n\nARC - Anti Russian Chats\nMade by Purpl3, Discord: PLNT#6825\n')

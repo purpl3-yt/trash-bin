@@ -11,9 +11,9 @@ ghoul = input('Select: ')
 sum = 1000
 minus = 7
 
-if str(ghoul).lower() in ['yes','y','1','да','н']:
+if str(ghoul).lower() in ['yes','y','1','да','н']:#check if you ghoul
     wait(0.5)
-    print("I'm ghoul")
+    print("I'm ghoul")#deadinside 1000-7 download free
     wait(0.4)
     while True:
         if sum!=6:

@@ -5,6 +5,10 @@ import time
 from os import system, name
 import itertools
 import threading
+
+print("Script doesn't work! sorry")
+quit()
+
 all_nicks_guley = []
 def clear():
     if name == 'nt':

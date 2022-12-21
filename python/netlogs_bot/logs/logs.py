@@ -1,8 +1,6 @@
 accounts_social = []
 def lts(list):#Функция делает из списка строку
-    str1 = ''#
-    temp1 = str1.join(list)
-    return temp1
+    return ''.join(list)
 
 def find_accounts(find):#Функция поиска аккаунтов (чекер)
     global accounts_social #Делаю переменную глобальной чтобы можно было ее прочитать в других скриптах

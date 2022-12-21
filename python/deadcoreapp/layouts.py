@@ -1,6 +1,7 @@
 import PySimpleGUI as sg
-tab_cheats_minecraft_layout = [sg.Button('Celestyal')]
+#Layouts here
 sg.theme('Black')
+tab_cheats_minecraft_layout = [sg.Button('Celestial')]
 tab_app_layout = [[sg.Text('Тут проги')],
 [sg.Button('FlameShot',tooltip='Прога для скринов',key='flameshot'),sg.Button('KDE connect',tooltip='Управление пк с телефона',key='kdeconnect'),sg.Button('Kdenlive',tooltip='Замена Premiere Pro',key='kdenlive'),sg.Button('Google Picasa',tooltip='Просмотр фотографий',key='picasa')],
 [sg.Button('Atom',tooltip='Замена PyCharm или VS Code',key='atom'),sg.Button('Blender',tooltip='Прога для 3д моделирования',key='blender'),sg.Button('https://photopea.com/',tooltip='Фотошоп онлайн без регистрации и смс и номера телефона',key='photopea'),sg.Button('BleachBit',tooltip='Скачать CCleaner без вирусов',key='bleach')],

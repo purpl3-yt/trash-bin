@@ -20,7 +20,10 @@ random_words = [
 'SSH',
 'CRACK',
 'HACK',
-'PURPL3']
+'PURPL3',
+'DARKNET',
+'DARKWEB',
+'DUCKDUCKGO']
 
 def gprint(text):
     print(Fore.GREEN+text+Fore.RESET)
