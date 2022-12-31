@@ -1,0 +1,1 @@
+# This bomber is outdated, but i'm update it before vaistore died, [Here](https://colab.research.google.com/drive/1CnQZ0CWkgPiIsVGQny3Hqg0clzjQ0Wk3?usp=sharing)

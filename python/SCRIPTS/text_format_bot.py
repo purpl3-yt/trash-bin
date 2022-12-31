@@ -5,7 +5,7 @@ from aiogram.dispatcher.filters.state import State, StatesGroup
 
 API_TOKEN = input('Api token: ')
 
-bot = Bot(token=API_TOKEN,)
+bot = Bot(token=API_TOKEN)
 
 dp = Dispatcher(bot,storage=MemoryStorage())
 class Text_Form(StatesGroup):

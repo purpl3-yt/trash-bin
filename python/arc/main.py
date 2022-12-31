@@ -117,7 +117,7 @@ async def update(_,msg):
     exec(open('./resources.py','r',errors='ignore').read())
 
 async def main():
-    print('\n\nARC - Anti Russian Chats\nMade by Purpl3, Discord: PLNT#6825\n')
+    print('\n\nARC - Anti Russian Chats\By Purpl3, Discord: PLNT#6825\n')
     await app.start()
     await app.send_message('me',f'''
 <code>Hello! Thank you for using ARC
