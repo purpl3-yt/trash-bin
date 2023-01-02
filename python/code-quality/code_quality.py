@@ -15,6 +15,10 @@ rate_table_bad = [
     'while 1:',
 ]
 
+rate_table_good = [
+    'while True:'
+]
+
 for file in files:
 
     if file!='code_quality.py':
@@ -24,9 +28,16 @@ for file in files:
             data = data_raw.split('\n')
 
         for line in data:
-            for elem in rate_table_bad:
-                if elem in line:
+            for elem_bad in rate_table_bad:
+                if elem_bad in line:
                     rate-=1
-                    print('You have bad code at line '+str(data.index(line)+1)+' minus 1 rate')
+                    print('You have bad code at line '+str(data.index(line)+1)+', -1 score')
+            
+            for elem_good in rate_table_good:
+                if elem_good in line:
+                    rate+=1
+                    print('You have good code at line '+str(data.index(line)+1)+', +1 score')
+            
+            
 
 print('Your score: '+str(rate))

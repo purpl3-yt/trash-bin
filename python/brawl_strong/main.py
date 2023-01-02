@@ -39,6 +39,7 @@ def start():
 4) Звук взрывного пердежа
 5) Версия бравл стронга
 6) Озвучить текст
+9) Выйти
 ''')
         sel = input('')
         if sel == '1':
@@ -75,4 +76,7 @@ def start():
             tts.save('voice.mp3')
             playsound.playsound('voice.mp3')
             os.remove('voice.mp3')
+
+        elif sel == '9':
+            sys.exit()
 start()
